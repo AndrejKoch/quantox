@@ -1,0 +1,17 @@
+{
+    "name": "vagrant/quantox",
+    "authors": [
+        {
+            "name": "andrej",
+            "email": "kochevskiak@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {},
+
+    "description": ""
+}
