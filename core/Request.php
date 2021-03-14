@@ -32,7 +32,6 @@ class Request
 
     public function getBody()
     {
-
         $body = [];
         if ($this->method() === 'get') {
             foreach ($_GET as $key => $value) {

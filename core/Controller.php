@@ -38,6 +38,4 @@ class Controller
         return $this->middlewares;
     }
 
-
-
 }

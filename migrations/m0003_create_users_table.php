@@ -1,6 +1,6 @@
 <?php
 
-class m0002_create_users_table
+class m0003_create_users_table
 {
     public function up()
     {
@@ -11,8 +11,9 @@ class m0002_create_users_table
                 firstname VARCHAR(255) NOT NULL,
                 lastname VARCHAR(255) NOT NULL,
                 password VARCHAR(255) NOT NULL,
-                status TINYINT NULL,
-                create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+                category_id INT ,
+                create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY (category_id) REFERENCES categories(id)
             ) ENGINE=INNODB;";
         $db->pdo->exec($SQL);
     }
