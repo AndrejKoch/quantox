@@ -2,11 +2,11 @@
 /** @var $model \app\models\User */
 ?>
 
-<h1>Create an account</h1>
+<h1 class="mt-4">Create an account</h1>
 
 
 <?php $form = \app\core\form\Form::begin('', "post") ?>
-<div class="row">
+<div class="row mt-4">
     <div class="col">
         <?php echo $form->field($model, 'firstname') ?>
     </div>
@@ -25,7 +25,7 @@
 $cats = \app\models\Category::getCategories();
 echo '<label>Select Type</label>';
 echo '<br/>';
-echo '<select name="category_id">';
+echo '<select class="form-select w-25" name="category_id">';
 $space = "&nbsp;&nbsp;";
 
 foreach ($cats as $cat) {
@@ -49,10 +49,8 @@ foreach ($cats as $cat) {
     }
 }
 echo '</select>';
-echo '<br/>';
-echo '<br/>';
 ?>
 
 
-<button type="submit" class="btn btn-primary">Submit</button>
+<button type="submit" class="mt-4 btn btn-primary">Submit</button>
 <?php echo \app\core\form\Form::end() ?>
